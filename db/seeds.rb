@@ -14,5 +14,5 @@ content = Faker::Lorem.paragraph(word_count=250)
 # Randomly assign one of the categories we just created.
 # The 'sample' method selects a random item from a collection.
 category = Category.all.sample
-a = Article.create(title: title, context: content, categories: [category,])
+a = Article.create(title: title, content: content, categories: [category,])
 end

@@ -3,6 +3,6 @@ class Article < ActiveRecord::Base
   has_many :article_categories
   has_many :categories, through: :article_categories
   validates :title, presence: true
-  validates :context, presence: true
+  validates :content, presence: true
   validates :categories, presence: true
 end
