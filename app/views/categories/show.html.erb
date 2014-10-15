@@ -1,0 +1,7 @@
+<h1>Articles filed under : <%=@category.name%></h1>
+<p>Total # of articles are : <%=@category.articles.count%></p>
+<ul>
+<% @articles.each do |article| %>
+  <li><%= link_to article.title, article_path(article) %></li>
+  <%end%>
+</ul>
