@@ -19,4 +19,9 @@
           render "new"
         end
       end
+   
+     private
+    def article_params
+      params.require(:article).permit(:title, :content, :category_ids => [])
+    end
 end
