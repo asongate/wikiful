@@ -22,7 +22,13 @@
   </div>
   
   <div class="container">
-      
+    <div class="row">
+     <div class="col-lg-4">
+       <% flash.each do |name, msg| %>
+         <%= content_tag :div, msg, id: "flash_#{name}" %>
+       <% end %>
+     </div>
+    </div>
     <div class="row">
       <div class="col-lg-9"><%= yield %></div> 
       <div class="col-lg-3 sidebar">
